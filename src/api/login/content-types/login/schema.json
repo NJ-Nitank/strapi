@@ -12,13 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Email": {
-      "type": "email",
-      "required": true
+    "email": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "mappedBy": "login"
     },
-    "Password": {
-      "type": "password",
-      "required": true
+    "password": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "pass"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "employee",
     "pluralName": "employees",
-    "displayName": "Employee"
+    "displayName": "Employee",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,24 @@
   "attributes": {
     "Name": {
       "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "login": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::login.login",
+      "inversedBy": "email"
+    },
+    "pass": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::login.login",
+      "inversedBy": "password"
     }
   }
 }
